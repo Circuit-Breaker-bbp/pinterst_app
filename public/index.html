@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Circuit-Breaker-BBP</h1>
+    <h1>Circuit-Breaker-BBP Media Manager</h1>
     <div id="auth">
       <a href="/auth/login" id="login">Log in with Pinterest</a>
       <form id="logout" method="post" action="/auth/logout" style="display:none">
@@ -19,7 +19,12 @@
   </header>
 
   <main id="main">
-    <p id="message">Log in with Pinterest to view and post pins.</p>
+    <section id="intro" class="intro">
+      <p id="message">Log in with Pinterest to view and post pins.</p>
+      <div class="intro-image-wrap">
+        <img src="simple-image.png" alt="" class="intro-image">
+      </div>
+    </section>
 
     <section id="pins-section" class="hidden">
       <h2>Your pins</h2>

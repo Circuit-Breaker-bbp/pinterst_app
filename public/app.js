@@ -1,5 +1,6 @@
 const main = document.getElementById('main');
 const message = document.getElementById('message');
+const introSection = document.getElementById('intro');
 const loginEl = document.getElementById('login');
 const logoutForm = document.getElementById('logout');
 const usernameEl = document.getElementById('username');
@@ -32,7 +33,7 @@ async function loadUser() {
     loginEl.style.display = 'none';
     logoutForm.style.display = 'block';
     usernameEl.textContent = user.username || user.id || 'Logged in';
-    hideMessage();
+    if (introSection) introSection.classList.add('hidden');
     pinsSection.classList.remove('hidden');
     createSection.classList.remove('hidden');
     loadBoards();
@@ -40,6 +41,7 @@ async function loadUser() {
   } catch {
     loginEl.style.display = 'block';
     logoutForm.style.display = 'none';
+    if (introSection) introSection.classList.remove('hidden');
     const params = new URLSearchParams(location.search);
     if (params.get('error') === 'auth') showMessage('Authentication was cancelled or invalid.');
     else if (params.get('error') === 'token') showMessage('Failed to get access token. Check app credentials.');

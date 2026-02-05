@@ -7,7 +7,11 @@ h2 { font-size: 1rem; margin: 1rem 0 0.5rem; }
 #auth a { color: #2563eb; text-decoration: none; }
 #auth a:hover { text-decoration: underline; }
 #logout span { margin-right: 0.5rem; color: #666; }
-#message { color: #666; }
+.intro { display: flex; flex-direction: column; min-height: calc(100vh - 5rem); }
+#message { color: #666; margin: 0 0 1rem; }
+.intro-image-wrap { flex: 1; min-height: 0; display: flex; }
+.intro-image { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.intro.hidden { display: none; }
 #pins { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem; margin-top: 0.5rem; }
 .pin { border: 1px solid #e2e2e2; border-radius: 8px; overflow: hidden; }
 .pin img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
