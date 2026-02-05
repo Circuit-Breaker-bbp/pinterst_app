@@ -67,10 +67,24 @@ function escapeHtml(s) {
   return div.innerHTML;
 }
 
+function pinListFromResponse(data) {
+  const raw = data?.items ?? data?.data;
+  if (Array.isArray(raw)) return raw;
+  if (raw && typeof raw === 'object' && !Array.isArray(raw)) return [];
+  return [];
+}
+
 async function loadPins() {
   try {
-    const data = await api('/api/pins?page_size=25');
-    const list = data.items || [];
+    let list = [];
+    let url = '/api/pins?page_size=100';
+    for (let i = 0; i < 10; i++) {
+      const data = await api(url);
+      const page = pinListFromResponse(data);
+      list = list.concat(page);
+      if (!data.bookmark) break;
+      url = '/api/pins?page_size=100&bookmark=' + encodeURIComponent(data.bookmark);
+    }
     if (list.length === 0) {
       pinsEl.innerHTML = '<p>No pins yet.</p>';
       return;
