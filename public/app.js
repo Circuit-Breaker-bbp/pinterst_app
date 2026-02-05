@@ -43,7 +43,7 @@ async function loadUser() {
     const params = new URLSearchParams(location.search);
     if (params.get('error') === 'auth') showMessage('Authentication was cancelled or invalid.');
     else if (params.get('error') === 'token') showMessage('Failed to get access token. Check app credentials.');
-    else showMessage('Log in to view and post pins.');
+    else showMessage('Log in with Pinterest to view and post pins.');
     pinsSection.classList.add('hidden');
     createSection.classList.add('hidden');
   }
