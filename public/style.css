@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 1rem; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+h1 { margin: 0; font-size: 1.25rem; }
+h2 { font-size: 1rem; margin: 1rem 0 0.5rem; }
+.hidden { display: none; }
+#auth a { color: #bd081c; text-decoration: none; }
+#auth a:hover { text-decoration: underline; }
+#logout span { margin-right: 0.5rem; color: #666; }
+#message { color: #666; }
+#pins { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem; margin-top: 0.5rem; }
+.pin { border: 1px solid #e2e2e2; border-radius: 8px; overflow: hidden; }
+.pin img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.pin .title { padding: 0.5rem; font-size: 0.875rem; word-break: break-word; }
+.pin .title:empty { display: none; }
+form label { display: block; margin: 0.5rem 0; }
+form input, form select, form textarea { width: 100%; padding: 0.4rem; }
+form textarea { min-height: 4rem; resize: vertical; }
+form button { margin-top: 0.5rem; padding: 0.5rem 1rem; background: #bd081c; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+form button:hover { background: #a30717; }
+#create-status { margin-top: 0.5rem; font-size: 0.875rem; }
+#create-status.error { color: #c00; }
+#create-status.ok { color: #080; }

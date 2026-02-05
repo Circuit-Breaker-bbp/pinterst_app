@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pinterest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pinterest</h1>
+    <div id="auth">
+      <a href="/auth/login" id="login">Log in with Pinterest</a>
+      <form id="logout" method="post" action="/auth/logout" style="display:none">
+        <span id="username"></span>
+        <button type="submit">Log out</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+    <p id="message">Log in to view and post pins.</p>
+
+    <section id="pins-section" class="hidden">
+      <h2>Your pins</h2>
+      <div id="pins"></div>
+    </section>
+
+    <section id="create-section" class="hidden">
+      <h2>Create pin</h2>
+      <form id="create-pin">
+        <label>Board <select name="board_id" required></select></label>
+        <label>Image URL <input name="image_url" type="url" required placeholder="https://..."></label>
+        <label>Title <input name="title" maxlength="100" placeholder="Optional"></label>
+        <label>Description <textarea name="description" maxlength="800" placeholder="Optional"></textarea></label>
+        <label>Link <input name="link" type="url" maxlength="2048" placeholder="Optional"></label>
+        <button type="submit">Create pin</button>
+      </form>
+      <p id="create-status"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
