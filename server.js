@@ -12,7 +12,7 @@ const APP_ID = process.env.PINTEREST_APP_ID;
 const APP_SECRET = process.env.PINTEREST_APP_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI || `http://localhost:${PORT}/callback`;
 
-const SCOPES = 'user_accounts:read,boards:read,pins:read,pins:write';
+const SCOPES = 'user_accounts:read,boards:read,boards:write,pins:read,pins:write';
 
 // In-memory: sessionId -> { access_token, refresh_token }
 const sessions = new Map();
@@ -132,3 +132,6 @@ app.listen(PORT, () => {
   console.log(`Pinterest app: http://localhost:${PORT}`);
   if (!APP_ID || !APP_SECRET) console.log('Add PINTEREST_APP_ID and PINTEREST_APP_SECRET to .env');
 });
+
+
+5478321482480297415
