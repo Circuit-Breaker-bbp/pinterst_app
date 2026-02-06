@@ -42,3 +42,20 @@ form button:hover { background: #1d4ed8; }
 main h3 { font-size: 0.9375rem; margin: 1.25rem 0 0.5rem; }
 main ul { margin: 0.5rem 0; padding-left: 1.5rem; }
 main li { margin: 0.25rem 0; }
+
+/* Privacy policy page */
+.privacy-content { line-height: 1.6; }
+.privacy-content .privacy-intro { margin-bottom: 1.5rem; color: #444; }
+.privacy-content section { margin-bottom: 2rem; }
+.privacy-content section:last-of-type { margin-bottom: 0; }
+.privacy-content h2 { font-size: 1.125rem; margin: 2rem 0 0.75rem; padding-bottom: 0.25rem; border-bottom: 1px solid #e2e2e2; }
+.privacy-content h2:first-of-type { margin-top: 0; }
+.privacy-content h3 { font-size: 1rem; margin: 1.25rem 0 0.5rem; }
+.privacy-content h4 { font-size: 0.9375rem; margin: 1rem 0 0.4rem; font-weight: 600; }
+.privacy-content p { margin: 0.5rem 0 1rem; }
+.privacy-content .privacy-definitions { margin: 0.75rem 0 1.5rem; padding-left: 0; list-style: none; }
+.privacy-content .privacy-definitions dt { font-weight: 600; margin-top: 0.75rem; }
+.privacy-content .privacy-definitions dt:first-child { margin-top: 0; }
+.privacy-content .privacy-definitions dd { margin: 0.2rem 0 0 1.25rem; }
+.privacy-content a { color: #2563eb; text-decoration: none; }
+.privacy-content a:hover { text-decoration: underline; }
