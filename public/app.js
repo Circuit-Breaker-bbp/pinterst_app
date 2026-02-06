@@ -33,6 +33,7 @@ async function loadUser() {
     loginEl.style.display = 'none';
     logoutForm.style.display = 'block';
     usernameEl.textContent = user.username || user.id || 'Logged in';
+    document.body.classList.add('logged-in');
     if (introSection) introSection.classList.add('hidden');
     pinsSection.classList.remove('hidden');
     createSection.classList.remove('hidden');
@@ -41,6 +42,7 @@ async function loadUser() {
   } catch {
     loginEl.style.display = 'block';
     logoutForm.style.display = 'none';
+    document.body.classList.remove('logged-in');
     if (introSection) introSection.classList.remove('hidden');
     const params = new URLSearchParams(location.search);
     if (params.get('error') === 'auth') showMessage('Authentication was cancelled or invalid.');

@@ -7,15 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="border-left" id="border-left" aria-hidden="true"></div>
+  <div class="page-center">
   <header>
     <h1>Circuit-Breaker-BBP Media Manager</h1>
-    <div id="auth">
+    <nav class="header-links">
+      <a href="/privacy.html">Privacy policy</a>
+      <div id="auth">
       <a href="/auth/login" id="login">Log in with Pinterest</a>
       <form id="logout" method="post" action="/auth/logout" style="display:none">
         <span id="username"></span>
         <button type="submit">Log out</button>
       </form>
     </div>
+    </nav>
   </header>
 
   <main id="main">
@@ -48,6 +53,8 @@
   <footer class="site-footer">
     <a href="/privacy.html">Privacy policy</a>
   </footer>
+  </div>
+  <div class="border-right" id="border-right" aria-hidden="true"></div>
 
   <script src="app.js"></script>
 </body>
