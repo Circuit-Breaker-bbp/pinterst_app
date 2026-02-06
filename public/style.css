@@ -25,3 +25,12 @@ form button:hover { background: #1d4ed8; }
 #create-status { margin-top: 0.5rem; font-size: 0.875rem; }
 #create-status.error { color: #c00; }
 #create-status.ok { color: #080; }
+
+.site-footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e2e2; font-size: 0.875rem; }
+.site-footer a { color: #2563eb; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.site-title { color: inherit; text-decoration: none; }
+.site-title:hover { text-decoration: underline; }
+main h3 { font-size: 0.9375rem; margin: 1.25rem 0 0.5rem; }
+main ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+main li { margin: 0.25rem 0; }
